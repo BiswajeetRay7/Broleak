@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bro Leak</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Is your browser leaking your information">
+    <meta property="image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="author" content="Is your browser leaking your information" />
+    <meta property="og:title" content="Is your browser leaking your information - Auto-fill phishing demo" />
+    <meta property="og:image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="og:image:url" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="og:site_name" content="Is your browser leaking your information - Auto-fill phishing demo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:author" content="https://facebook.com/RobinLinus" />
+    <meta property="fb:pages" content="451189218422617" />
+    <meta property="fb:profile_id" content="451189218422617" />
+    <meta property="og:url" content="https://robinlinus.github.io/autofill-phishing/" />
+    <meta property="fb:app_id" content="1527795287522439" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Is your browser leaking your information - Auto-fill phishing demo">
+    <meta name="twitter:image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta name="twitter:description" content="Is your browser leaking your information - Auto-fill phishing demo">
+    <meta name="twitter:creator:id" content="4675481071">
+    <meta name="author" content="Biswajeet Ray" />
+
+	<style type="text/css">
+		body{
+			background: #000000;
+			text-align: center;
+			color: white;
+			font-family: sans-serif;	
+			padding-top: 24px;
+			padding-bottom: 40px;
+			line-height: 20px;
+		}
+
+		form{
+		   margin: 0 auto;
+		   width: 90%;
+		   max-width: 720px;
+		}
+
+		#name{
+			display: inline-block;
+			width: 100%;
+		    font-size: 24px;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+		    box-shadow: none;
+		    border-radius: 3px;
+		    box-sizing: border-box;
+		    background: #f6f7f8;
+		    color: white;
+		    text-align: center;
+		    padding: 12px;
+		    border: none;
+		    border-bottom: solid 2px #9dbaea;
+		    -webkit-transition: border 0.3s;
+		    transition: border 0.3s;
+		}
+
+		#name:focus {
+    		border-bottom: solid 2px #F48FB1;
+		}
+
+		#innocent{
+			margin-top: 64px;
+		}
+
+		#innocent span{
+			font-size: 11px;
+		}
+
+		#pwnd{
+			margin-top: 80px;
+			-webkit-transition: transform 500ms;
+			transition: transform 500ms;
+			transform: scale(0.01);
+			-webkit-transform: scale(0.01);
+			height: 20px;
+		}
+
+		#pwnd input{
+			background: none;
+		    border: none;
+		    display: inline-block;
+		    padding: 8px;
+		    margin: 0;	
+		}
+
+		a{
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+
+		#explain{
+			text-align: left;
+		}
+
+		footer {
+		    margin-top: 64px;
+		    padding: 16px;
+		    font-size: 16px;
+		    text-align: center;
+		    margin-bottom: 49px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Auto fill phishing demo</h2>
+	<noscript><h1>Javascript must be enabled!</h1><style>h1{margin-top: 80px;}form{display: none;}</style></noscript>
+	<form autocomplete="on">
+		<div id="explain">
+			             <br> This is a demonstration of a security issue in most browser's  Auto-fill feature.<br> 
+        </b>
+		</div>
+		<div id="innocent">
+			<h3>Start filling or click to use autofill:</h3>
+			<input id="name" name="name" type="text" placeholder="Your Name" autofocus tabindex="1" required autocomplete="name">
+			<br><span>(None of your data will leave your device)</span>
+		</div>
+		<div id="pwnd">
+			<h1>Identity leaked!</h1>
+			Did you notice all those hidden fields?<br><br>
+			<h4>Your Names</h4>
+			<input id="firstname" name="firstname" type="text" >
+			<input id="lastname" name="lastname" type="text">
+			<h4>Your Email</h4>
+			<input id="email" name="email" type="text" id="email">
+			<h4>Your Job</h4>
+			<input id="company" name="company" type="text"> 
+			<h4>Your Address</h4>
+			<input id="street" name="street" type="text" id="street">
+			<input id="postal" name="postal" type="text">
+			<input id="city" name="city" type="text">
+			<input id="country" name="country" type="text"> 
+			<h4>Your Phone Number</h4>
+			<input id="phone" name="phone" type="text">
+			<h4>Your Credit Card Info</h4>
+			<input id="cc_number" type="text" name="cc_number">
+			<input id="cc_month" type="number" name="cc_month">
+			<input id="cc_year" type="number" name="cc_year">
+			<input id="cc_cvv" type="number" name="cc_cvv">
+			<br><br>
+			<div><strong>Always be alert when you use auto-fill! feature</strong><br>
+			In your browser may fill fields that are hidden from you. 
+			</div><br><br><br>
+			<a href="https://github.com/BiswajeetRay7/Autofiller" target="_blank">This is open source project.</a><br><br><br><br>
+		</div>
+	</form>
+
+<a href="https://github.com/BiswajeetRay7"><footer>Built with ♥ by Biswajeet Ray</footer></a>
+<script type="text/javascript">
+	var q = function(id){
+		return document.getElementById(id);
+	}
+	q('name').oninput=function(){
+		debounce(function(){
+			if(q('email').value || q('email').value){
+				var pwnd =q('pwnd').style;
+				pwnd.height='auto';
+				pwnd.transform='scale(1)';
+				document.activeElement.blur();
+			} else {
+				q('pwnd').style.transform='scale(0.01)';
+			}
+		})
+	}
+
+	var timer = null;
+	function debounce(callback){
+		if(timer){
+			clearTimeout(timer);
+		}
+		timer = setTimeout(callback,500);
+	}
+
+</script>
+
+</body>
+</html>
